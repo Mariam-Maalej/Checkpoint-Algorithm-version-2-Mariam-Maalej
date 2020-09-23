@@ -1,0 +1,49 @@
+ALGORITHM algorithm_name
+VAR
+    nv : INTEGER:=0;
+    nw : INTEGER:=0;
+    ls : INTEGER :=0;
+    sentence: STRING :='';
+    caractere : CHAR ;
+BEGIN
+    REPEAT
+        Write('Ecrire un caractère')
+        Read (caractere)
+        sentence := sentence + caractere;
+        ls:=ls+1;
+    UNTIL (caractère='.')
+    Write(sentence)
+    Write('The length of this sentence is',nc)
+    
+    FOR i FROM 0 TO nc-1 STEP step  1 DO
+      SWITCH (sentence) DO
+          case (sentence[i]='a') : nv:=nv+1;
+          Break;
+          case (sentence[i]='e') : nv:=nv+1;
+          Break;
+          case (sentence[i]='i') : nv:=nv+1;
+          Break;
+          case (sentence[i]='o') : nv:=nv+1;
+          Break;
+          case (sentence[i]='u') : nv:=nv+1;
+          Break;
+          case (sentence[i]='A') : nv:=nv+1;
+          Break;
+          case (sentence[i]='E') : nv:=nv+1;
+          Break;
+          case (sentence[i]='I') : nv:=nv+1;
+          Break;
+          case (sentence[i]='O') : nv:=nv+1;
+          Break;
+          case (sentence[i]='U') : nv:=nv+1;
+      END_SWITCH
+    END_FOR
+    Write('The number of vowels in this sentence is',nv)
+
+    FOR i FROM 0 TO nc-1 STEP 1  DO
+        IF (sentence(i)=' ') THEN
+            nw:=nw+1;
+        END_IF
+    END_FOR
+    Write('The number of words in this sentence is',nw)
+END
